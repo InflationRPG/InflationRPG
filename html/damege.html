@@ -1,0 +1,175 @@
+<link rel="stylesheet" href="css/damege.css">
+<script type="text/javascript" src="js/damege.js"></script>
+<h2>데미지 계산기</h2>
+<h4>어느정도 오차범위 있습니다.</h4>
+<table class="table table-bordered">
+	<tr>
+		<td></td>
+		<td>Q스킬 배율</td>
+		<td>W스킬 배율</td>
+		<td>E스킬 배율</td>
+		<td>패시브 갑옷 배율</td>
+		<td>패시브 반지 배율</td>
+	</tr>
+	<tr>
+		<td>최소</td>
+		<td>
+			<input type="text" id="qMin" class="form-control repoint damegeSetting" value="30" readonly>
+		</td>
+		<td>
+			<input type="text" id="wMin" class="form-control repoint damegeSetting" value="230" readonly>
+		</td>
+		<td>
+			<input type="text" id="eMin" class="form-control repoint damegeSetting" value="900" readonly>
+		</td>
+		<td>
+			<input type="text" id="ringMin" class="form-control repoint damegeSetting" value="30">
+		</td>
+		<td>
+			<input type="text" id="armourMin" class="form-control repoint damegeSetting"  value="30">
+		</td>
+	</tr>
+	<tr>
+		<td>최대</td>
+		<td>
+			<input type="text" id="qMax" class="form-control repoint damegeSetting" value="70" readonly>
+		</td>
+		<td>
+			<input type="text" id="wMax" class="form-control repoint damegeSetting"  value="270" readonly> 
+		</td>
+		<td>
+			<input type="text" id="eMax" class="form-control repoint damegeSetting" value="1100"readonly>
+		</td>
+		<td>
+			<input type="text" id="ringMax" class="form-control repoint damegeSetting" value="30">
+		</td>
+		<td>
+			<input type="text" id="armourMax" class="form-control repoint damegeSetting" value="30">
+		</td>
+	</tr>
+</table>
+<table class="table table-bordered">
+	<tr>
+		<th>캐릭 공격력</th>
+		<td>
+			<input type="text" id="atk" class="form-control repoint" value="0">
+		</td>
+	</tr>
+	<tr>
+		<th>캐릭 데미지 증가%</th>
+		<td>
+			<input type="text" id="damege" class="form-control repoint" value="0">
+		</td>
+	</tr>
+	<tr>
+		<th>캐릭 크리 데미지 증가%</th>
+		<td>
+			<input type="text" id="cridmg" class="form-control repoint" value="0">
+		</td>
+	</tr>
+	<tr>
+		<th>적 방어력</th>
+		<td>
+			<input type="text" id="shield" class="form-control repoint" value="0">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<button type="button" id="dmgCalBtn" class="btn btn-info">계산하기</button>
+		</td>
+	</tr>
+</table>
+
+<table class="table table-bordered">
+	<tr>
+		<td colspan="2" bgcolor="#00AFFF">
+			Q스킬
+		</td>
+		<td colspan="2" bgcolor="#00AFFF">
+			W스킬
+		</td>
+		<td colspan="2" bgcolor="#00AFFF">
+			E스킬
+		</td>
+	</tr>
+	<tr>
+		<td>
+			최소<br>데미지
+		</td>
+		<td>
+			최대<br>데미지
+		</td>
+		<td>
+			최소<br>데미지
+		</td>
+		<td>
+			최대<br>데미지
+		</td>
+		<td>
+			최소<br>데미지
+		</td>
+		<td>
+			최대<br>데미지
+		</td>				
+	</tr>
+	<tr>
+		<td>
+			<span id="qMinResult"></span>
+		</td>
+		<td>
+			<span id="qMaxResult"></span>
+		</td>
+		<td>
+			<span id="wMinResult"></span>
+		</td>
+		<td>
+			<span id="wMaxResult"></span>
+		</td>
+		<td>
+			<span id="eMinResult"></span>
+		</td>
+		<td>
+			<span id="eMaxResult"></span>
+		</td>
+		
+	</tr>
+</table>
+
+<table class="table table-bordered">
+	<tr>
+		<td colspan="2" bgcolor="#00AFFF">
+			패시브 반지
+		</td>
+		<td colspan="2" bgcolor="#00AFFF">
+			패시브 갑옷
+		</td>
+	</tr>
+	<tr>
+		<td>
+			최소<br>데미지
+		</td>
+		<td>
+			최대<br>데미지
+		</td>
+		<td>
+			최소<br>데미지
+		</td>
+		<td>
+			최대<br>데미지
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<span id="ringMinResult"></span>
+		</td>
+		<td>
+			<span id="ringMaxResult"></span>
+		</td>
+		<td>
+			<span id="armourMinResult"></span>
+		</td>
+		<td>
+			<span id="armourMaxResult"></span>
+		</td>
+	</tr>
+</table>

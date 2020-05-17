@@ -1,0 +1,189 @@
+<script type="text/javascript" src="js/status.js"></script>
+<link rel="stylesheet" href="css/status.css">
+
+<div id="point">
+	<h2>환생 포인트 상점 계산기</h2>
+	<table class="table table-bordered">
+		<tr>
+			<th></th>
+			<th>공속</th>
+			<th>이속</th>
+			<th>데미지 증가</th>
+			<th>크리 데미지 증가</th>
+			<th>스텟 포인트 증가</th>
+			<th>체력증가</th>
+			<th>크리 확률 증가</th>
+		</tr>
+		<tr>
+			<td>포인트 증가 단위</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="0" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="0" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="100" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="100" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="200" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="100" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="50" readonly>
+			</td>
+		</tr>
+		<tr>
+			<td>포인트 증가량</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="0" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="0" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="10" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="10" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="20" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="10" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="30" readonly>
+			</td>
+		</tr>
+		<tr>
+			<td>최대 수치</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="40" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="20" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="No limit" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="No limit" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="6,297" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="No limit" readonly>
+			</td>
+			<td>
+				<input type="text" class="form-control statusSetting" value="100" readonly>
+			</td>
+		</tr>
+	</table>
+	<table class="table table-bordered">
+		<tr>
+			<th>
+				환생잼 %
+			</th>
+			<td>
+				<input type="text" id="rebirthPer" class="form-control repoint" value="0">
+			</td>
+			<th>
+			</th>
+			<td>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				공속
+			</th>
+			<td>
+				<input type="text" id="atspeed1" class="form-control repoint" value="0">
+				<span class="bet" > ~ </span>
+				<input type="text" id="atspeed2" class="form-control repoint" value="0">
+			</td>
+			<th>
+				이속
+			</th>
+			<td>
+				<input type="text" id="mvspeed1" class="form-control repoint" value="0">
+				<span class="bet" > ~ </span>
+				<input type="text" id="mvspeed2" class="form-control repoint" value="0">
+			</td>
+		</tr>
+		<tr>
+			<th>
+				데미지 증가
+			</th>
+			<td>
+				<input type="text" id="demege1" class="form-control repoint" value="0">
+				<span class="bet" > ~ </span>
+				<input type="text" id="demege2" class="form-control repoint" value="0">
+			</td>
+			<th>
+				크리 데미지 증가
+			</th>
+			<td>
+				<input type="text" id="cridemege1" class="form-control repoint" value="0">
+				<span class="bet" > ~ </span>
+				<input type="text" id="cridemege2" class="form-control repoint" value="0">
+			</td>
+		</tr>
+		<tr>
+			<th>
+				스텟 포인트 증가
+			</th>
+			<td>
+				<input type="text" id="status1" class="form-control repoint" value="0">
+				<span class="bet" > ~ </span>
+				<input type="text" id="status2" class="form-control repoint" value="0">
+			</td>
+
+			<th>
+				체력 증가
+			</th>
+			<td>
+				<input type="text" id="hp1" class="form-control repoint" value="0">
+				<span class="bet" > ~ </span>
+				<input type="text" id="hp2" class="form-control repoint" value="0">
+			</td>
+		</tr>
+		<tr>
+			<th>
+				크리 확률 증가
+			</th>
+			<td>
+				<input type="text" id="criper1" class="form-control repoint" value="0">
+				<span class="bet" > ~ </span>
+				<input type="text" id="criper2" class="form-control repoint" value="0">
+			</td>
+			<th>
+				
+			</th>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<th>결과</th>
+			<td>
+				<span id="statusResult"></span>
+			</td>
+			<td colspan="2">
+				<span id="divpoint"></span>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<button type="button" id="statusBtn" class="btn btn-success" style="width:100%;">계산하기</button>
+			</td>
+		</tr>
+	</table>
+</div>
