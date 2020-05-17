@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* 메인 */
+table{
+	width:100%;
+}
+tr{
+	width:25%;
+}
+td{
+	width:75%;
+}

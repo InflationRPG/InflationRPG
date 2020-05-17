@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* 메인 */
+div#btns{
+	text-align: center;
+	line-height: 95px;
+}
+.btns{
+	width:25%;
+	height:50px;
+	padding:0;
+}

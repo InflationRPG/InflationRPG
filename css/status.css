@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* 메인 */
+.statusSetting{
+	width:100%;
+}
+.repoint{
+	width:40%;
+	float:left;
+}
+.bet{
+	margin-left : 10px;
+	margin-right : 10px;
+	font-size : 16pt;
+	float:left;
+}
+th{
+	text-align: center;
+}
+td{
+	text-align: center;
+}

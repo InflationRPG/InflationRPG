@@ -1,0 +1,13 @@
+@charset "UTF-8";
+th{
+	width:25%;
+}
+td{
+	text-align: center;
+}
+.damegeSetting{
+	width:100%;
+}
+#dmgCalBtn{
+	width:100%;
+}
