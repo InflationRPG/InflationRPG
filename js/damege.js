@@ -44,62 +44,6 @@ $(function(){
 	});
 });
 
-/*function numComma(num){
-	return num.toLocaleString();
-}*/
-/*function numFormat(num){
-	num = ""+num;
-	if(num.indexOf("e+")>0){
-		var subNum = num.substring(0,num.indexOf("e+"));
-		var indices = num.substring(num.indexOf("e+")+2,num.length);
-		console.log(num);
-		console.log(subNum);
-		console.log(indices);
-		var subNumSplit = new Array();
-		if(subNum.indexOf(".")>0){
-			subNumSplit = subNum.split(".");
-			num = subNumSplit[0]+""+subNumSplit[1];
-			indices = indices - subNumSplit[1].length;
-		}else{
-			num = subNum;
-		}
-		 
-		for(var i=0;i<indices;i++){
-			num = num+"0";
-		}
-	}
-
-	var numLength = num.length;
-	var numText = "";
-	var dan = ["만","억","조","경","해","자","양","구","간","정","재","극"];
-	var cnt = 0;
-	
-	for(var i=numLength,j=0;i>0;i--,j++){
-		if(j>0&&j%4==0){
-			numText = numText+dan[cnt];
-			cnt++;
-		}
-		numText = numText + num.substring(i-1,i);
-	}
-	var reverseText = "";
-	var zerocnt = 0;
-	for(var i=0;i<numText.length;i++){
-		reverseText = numText.substring(i,i+1)+reverseText;
-	}
-	console.log
-	for(var i=0;i<dan.length;i++){
-		if(reverseText.indexOf("0000"+dan[i])>0){
-			var textSplit = reverseText.split("0000"+dan[i]);
-			reverseText = textSplit[0]+textSplit[1];
-		}	
-	}
-	
-	if(reverseText.indexOf("0000")>0){
-		reverseText = reverseText.substring(0,reverseText.length-4);
-	}
-	return reverseText;
-}*/
-
 function FormattingNumberToKoreanNotation(num){
 
     const unitMarks = ["","만","억","조","경","해","자","양","구","간","정","재","극"];
