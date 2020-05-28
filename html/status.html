@@ -1,93 +1,99 @@
-<script type="text/javascript" src="js/status.js"></script>
 <link rel="stylesheet" href="css/status.css">
-
+<script type="text/javascript" src="js/status.js"></script>
 <div id="point">
 	<h2>환생 포인트 상점 계산기</h2>
 	<h4>너무 높은 수치를 입력하면 멈춥니다..</h4>
-	<table class="table table-bordered">
-		<tr>
-			<th></th>
-			<th>공속</th>
-			<th>이속</th>
-			<th>데미지 증가</th>
-			<th>크리 데미지 증가</th>
-			<th>스텟 포인트 증가</th>
-			<th>체력증가</th>
-			<th>크리 확률 증가</th>
-		</tr>
-		<tr>
-			<td>포인트 증가 단위</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="0" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="0" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="100" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="100" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="200" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="100" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="50" readonly>
-			</td>
-		</tr>
-		<tr>
-			<td>포인트 증가량</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="0" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="0" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="10" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="10" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="20" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="10" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="30" readonly>
-			</td>
-		</tr>
-		<tr>
-			<td>최대 수치</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="40" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="20" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="No limit" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="No limit" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="6,297" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="No limit" readonly>
-			</td>
-			<td>
-				<input type="text" class="form-control statusSetting" value="100" readonly>
-			</td>
-		</tr>
-	</table>
+	<h3>
+		설정보기
+		<button type="button" class="btn btn-info" id="infoBtn">펼치기</button>
+	</h3>
+	<div class="setting" style="display:none;">
+		<table class="table table-bordered">
+			<tr>
+				<th></th>
+				<th>공속</th>
+				<th>이속</th>
+				<th>데미지 증가</th>
+				<th>크리 데미지 증가</th>
+				<th>스텟 포인트 증가</th>
+				<th>체력증가</th>
+				<th>크리 확률 증가</th>
+			</tr>
+			<tr>
+				<td>포인트 증가 단위</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="0" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="0" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="100" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="100" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="200" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="100" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="50" readonly>
+				</td>
+			</tr>
+			<tr>
+				<td>포인트 증가량</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="0" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="0" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="10" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="10" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="20" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="10" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="30" readonly>
+				</td>
+			</tr>
+			<tr>
+				<td>최대 수치</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="40" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="20" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="No limit" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="No limit" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="6,297" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="No limit" readonly>
+				</td>
+				<td>
+					<input type="text" class="form-control statusSetting" value="100" readonly>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
 	<table class="table table-bordered">
 		<tr>
 			<th>
