@@ -1,16 +1,46 @@
 $(function(){
+	
+	//펼치기
+	var cnt = 1;
+	$("#infoBtn").click(function(){
+		$(".setting").slideToggle('slow');
+		if(cnt==0){
+			cnt = 1;
+			$(this).html("펼치기");
+		}else{
+			cnt = 0;
+			$(this).html("접기");
+			
+		}
+	});
+	
+	$(".repoint").focus(function(){
+		var val = $(this).val();
+		var value = $(this).attr("value");
+		if(val==value){
+			$(this).val('');
+		}
+	});
+	
 	//딜 계산기 계산
+	$(".repoint").focusout(function(){
+		var value = $(this).val();
+		var defaultValue = $(this).attr("value");
+		if(value==""||value==null||value.length==0){
+			$(this).val(defaultValue);
+		}
+	});
 	$("#dmgCalBtn").click(function(){
 		var atk = $("#atk").val();
 		var damege = parseInt($("#damege").val());
 		var cridmg = parseInt($("#cridmg").val());
 		var shield = parseInt($("#shield").val());
-		var skillMin = [$("#qMin").val(),$("#wMin").val(),$("#eMin").val(),$("#ringMin").val(),$("#armourMin").val()];
-		var skillMax = [$("#qMax").val(),$("#wMax").val(),$("#eMax").val(),$("#ringMax").val(),$("#armourMax").val()];
-		var skillLevel = [20, 10, 4,1,1];
-		var min = ["#qMinResult","#wMinResult","#eMinResult","#ringMinResult","#armourMinResult"];
-		var max = ["#qMaxResult","#wMaxResult","#eMaxResult","#ringMaxResult","#armourMaxResult"];
-		for(var i=0;i<5;i++){
+		var skillMin = [$("#qMin").val(),$("#wMin").val(),$("#eMin").val(),$("#ringMin").val(),$("#armourMin").val(),$("#weaponMin").val()];
+		var skillMax = [$("#qMax").val(),$("#wMax").val(),$("#eMax").val(),$("#ringMax").val(),$("#armourMax").val(),$("#weaponMax").val()];
+		var skillLevel = [$("#qLevel").val(),$("#wLevel").val(),$("#eLevel").val(),$("#ringLevel").val(),$("#armourLevel").val(),$("#weaponLevel").val()];
+		var min = ["#qMinResult","#wMinResult","#eMinResult","#ringMinResult","#armourMinResult","#weaponMinResult"];
+		var max = ["#qMaxResult","#wMaxResult","#eMaxResult","#ringMaxResult","#armourMaxResult","#weaponMaxResult"];
+		for(var i=0;i<6;i++){
 			//데미지 퍼센트
 			var damegeMin = (atk*(skillLevel[i]*parseInt(skillMin[i])))*(1+(damege*0.01));
 			var damegeMax = (atk*(skillLevel[i]*parseInt(skillMax[i])))*(1+(damege*0.01));
